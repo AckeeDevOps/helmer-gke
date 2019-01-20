@@ -19,7 +19,7 @@ deploy:gke:
     GCLOUD_PROJECT_ID: my-project-12345
     GCLOUD_GKE_CLUSTER_NAME: production
     GCLOUD_GKE_ZONE: europe-west3-c
-  scripts:
+  script:
     - gke-init
     # optional step, check https://github.com/vranystepan/vaultier/
     - vaultier
