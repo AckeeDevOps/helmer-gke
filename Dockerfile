@@ -30,7 +30,9 @@ RUN echo installing gcloud SDK ... && \
   echo installing Vaultier ... && \
   wget https://github.com/vranystepan/vaultier/releases/download/v0.0.4/vaultier-v0.0.4 -O /usr/local/bin/vaultier > /dev/null 2>&1 && \
   chmod +x /usr/local/bin/vaultier && \
-  chmod +x /usr/local/bin/gke-init
+  chmod +x /usr/local/bin/gke-init && \
+  echo installing ca-certificates ... && \
+  apk add ca-certificates
 
 ENV PATH="${PATH}:/opt/google-cloud-sdk/bin/"
 
