@@ -17,7 +17,5 @@ echo $GCLOUD_SA_KEY | base64 -d > /tmp/key.json
 gcloud auth activate-service-account --key-file=/tmp/key.json
 
 echo "Initializing GKE cluster"
-gcloud container clusters get-credentials ${GCLOUD_GKE_CLUSTER_NAME} && \
-  --zone=${GCLOUD_GKE_ZONE} && \
-  --project=${GCLOUD_PROJECT_ID}
+gcloud container clusters get-credentials ${GCLOUD_GKE_CLUSTER_NAME} --zone=${GCLOUD_GKE_ZONE} --project=${GCLOUD_PROJECT_ID}
 
