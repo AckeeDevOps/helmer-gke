@@ -14,7 +14,7 @@
 
 echo "Initializing gcloud auth"
 echo GCLOUD_SA_KEY | base64 -d > /tmp/key.json
-gcloud auth activate-service-account --key=/tmp/key.json
+gcloud auth activate-service-account --key-file=/tmp/key.json
 
 echo "Initializing GKE cluster"
 gcloud container cluster get-credentials ${GCLOUD_GKE_CLUSTER_NAME} && \
