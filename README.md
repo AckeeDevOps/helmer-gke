@@ -6,6 +6,11 @@ in the grand finale when you want to deploy your Helm chart to GKE.
 It does not aim to be an universal tool to solve all the misery 
 of this universe. It just makes one very specific scenario happen.
 
+[![](https://images.microbadger.com/badges/image/ackee/helmer-gke.svg)](https://microbadger.com/images/ackee/helmer-gke 
+"Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/ackee/helmer-gke.svg)](https://microbadger.com/images/ackee/helmer-gke 
+"Get your own version badge on microbadger.com")
+
 ## Gitlab CI example
 
 ```yaml
