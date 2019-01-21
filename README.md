@@ -1,4 +1,4 @@
-# Helmer: a dogsbody for Helm deployment on GKE
+# Helmer: a dogsbody for Helm deployments on GKE
 
 This simple image is meant to be executed in CI/CD environments 
 in the grand finale when you want to deploy your Helm chart to GKE.
