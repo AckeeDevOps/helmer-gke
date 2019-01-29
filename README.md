@@ -39,6 +39,11 @@ services:
   helmer-gke:
     working_dir: /src
     image: ackee/helmer-gke:<version>
+    environment:
+      GCLOUD_PROJECT_ID: my-project-12345
+      GCLOUD_GKE_CLUSTER_NAME: production
+      GCLOUD_GKE_ZONE: europe-west3-c
+      GCLOUD_SA_KEY: base-64-encoded-key==
     volumes:
       - ./:/src
     command:
