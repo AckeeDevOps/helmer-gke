@@ -30,3 +30,22 @@ deploy:gke:
     - vaultier
     - helm upgrade release-name -i -f /path/to/values.yaml -f /path/to/secrets /path/to/chart
 ```
+
+## Docker-compose example
+
+```yaml
+version: "3.7" 
+services:
+  helmer-gke:
+    working_dir: /src
+    image: ackee/helmer-gke:<version>
+    volumes:
+      - ./:/src
+    command:
+      - /bin/sh
+      - -c
+      - |
+        gke-init
+        vaultier
+        helm upgrade release-name -i -f /path/to/values.yaml -f /path/to/secrets /path/to/chart
+```
