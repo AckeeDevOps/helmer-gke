@@ -8,7 +8,7 @@ COPY gke-init.sh /usr/local/bin/gke-init
 #   - gcloud SDK version 230
 #   - kubectl
 #   - Helm 2.11.0
-#   - Vaultier v0.0.4
+#   - Vaultier v1.0.02
 # ensure files have correct permissions:
 #   - /usr/local/bin/gke-init
 RUN echo installing gcloud SDK ... && \
@@ -29,7 +29,7 @@ RUN echo installing gcloud SDK ... && \
   mv linux-amd64/helm /usr/local/bin && \
   rm -rf linux-amd64 && \
   echo installing Vaultier ... && \
-  wget https://github.com/vranystepan/vaultier/releases/download/v0.0.4/vaultier-v0.0.4 -O /usr/local/bin/vaultier > /dev/null 2>&1 && \
+  wget https://github.com/AckeeDevOps/vaultier/releases/download/v1.0.2/vaultier-v1.0.2 -O /usr/local/bin/vaultier > /dev/null 2>&1 && \
   chmod +x /usr/local/bin/vaultier && \
   chmod +x /usr/local/bin/gke-init && \
   echo installing ca-certificates ... && \
