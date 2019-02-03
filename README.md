@@ -26,7 +26,7 @@ deploy:gke:
     GCLOUD_GKE_ZONE: europe-west3-c
   script:
     - gke-init
-    # optional step, check https://github.com/vranystepan/vaultier/
+    # optional step, check https://github.com/AckeeDevOps/vaultier/
     - vaultier
     - helm upgrade release-name -i -f /path/to/values.yaml -f /path/to/secrets /path/to/chart
 ```
