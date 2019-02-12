@@ -33,7 +33,7 @@ RUN echo installing gcloud SDK ... && \
   chmod +x /usr/local/bin/vaultier && \
   chmod +x /usr/local/bin/gke-init && \
   echo installing ca-certificates ... && \
-  apk add ca-certificates > /dev/null 2>&1 &&
+  apk add ca-certificates > /dev/null 2>&1 && \
   apk add openssl > /dev/null 2>&1
 
 ENV PATH="${PATH}:/opt/google-cloud-sdk/bin/"
